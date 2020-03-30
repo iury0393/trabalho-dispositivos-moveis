@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/srlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/linearLayoutSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_corner_8_theme"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+
+                    <Spinner
+                            android:id="@+id/sourceCountrySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black" />
+
+                    <EditText
+                            android:id="@+id/amountInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:focusedByDefault="true"
+                            android:hint="@string/amount"
+                            android:inputType="numberDecimal"
+                            android:text="@string/zero"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/tvSourceCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+
+
+            <LinearLayout
+                    android:id="@+id/linearDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rounded_corner_8_theme"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        >
+
+
+                    <Spinner
+                            android:id="@+id/destinationCountrySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    <TextView
+                            android:id="@+id/resultText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/zero"
+                            android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/tvDestinationRateCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Unifor Conversor</string>
+    <string name="amount">Quantidade</string>
+    <string name="convert">Converter</string>
+    <string name="zero">0</string>
+    <string name="currency_val">%1$.2f %2$s</string>
+</resources>
